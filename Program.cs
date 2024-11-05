@@ -1,3 +1,5 @@
+using System;
+using BasesDiccionario.Connection;
 namespace BasesDiccionario
 {
     internal static class Program
@@ -12,6 +14,15 @@ namespace BasesDiccionario
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+            Connect dbConnect = new Connect(
+                "chancar",
+                "oracle",
+                "localhost",
+                1521,
+                "Bases"
+            );
+
+            dbConnect.Conectar();    
         }
     }
 }
