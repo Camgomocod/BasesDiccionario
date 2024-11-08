@@ -1,6 +1,6 @@
 ﻿namespace BasesDiccionario
 {
-    partial class MianForm
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -34,7 +34,7 @@
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
-            textBox1 = new TextBox();
+            textBoxResultados = new TextBox();
             SuspendLayout();
             // 
             // bt_tablas
@@ -94,30 +94,31 @@
             button6.Text = "Filtro_Tablas";
             button6.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxResultados
             // 
-            textBox1.BackColor = SystemColors.ActiveCaption;
-            textBox1.Location = new Point(133, 53);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.ScrollBars = ScrollBars.Both;
-            textBox1.Size = new Size(552, 154);
-            textBox1.TabIndex = 7;
+            textBoxResultados.BackColor = SystemColors.ActiveCaption;
+            textBoxResultados.Location = new Point(133, 53);
+            textBoxResultados.Multiline = true;
+            textBoxResultados.Name = "textBoxResultados";
+            textBoxResultados.ReadOnly = true;
+            textBoxResultados.ScrollBars = ScrollBars.Both;
+            textBoxResultados.Size = new Size(552, 154);
+            textBoxResultados.TabIndex = 7;
             // 
-            // Form1
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxResultados);
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(bt_tablas);
-            Name = "Form1";
+            Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
@@ -131,6 +132,6 @@
         private Button button4;
         private Button button5;
         private Button button6;
-        private TextBox textBox1;
+        private TextBox textBoxResultados;
     }
 }

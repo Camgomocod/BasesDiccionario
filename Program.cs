@@ -13,16 +13,7 @@ namespace BasesDiccionario
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new MianForm());
-            Connect dbConnect = new Connect(
-                "chancar",
-                "oracle",
-                "localhost",
-                1521,
-                "Bases"
-            );
-
-            dbConnect.Conectar();    
+            Application.Run(new LoginForm());
         }
     }
 }

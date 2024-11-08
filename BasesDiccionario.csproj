@@ -2,15 +2,16 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="oracle.instantclient" Version="12.1.0" />
-    <PackageReference Include="Oracle.ManagedDataAccess" Version="23.6.0" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="23.6.1" />
   </ItemGroup>
 
 </Project>

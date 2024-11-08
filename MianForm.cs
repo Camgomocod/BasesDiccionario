@@ -1,8 +1,10 @@
+using Oracle.ManagedDataAccess.Client;
+
 namespace BasesDiccionario
 {
-    public partial class MianForm : Form
+    public partial class MainForm : Form
     {
-        public MianForm()
+        public MainForm()
         {
             InitializeComponent();
         }

@@ -10,31 +10,48 @@ namespace BasesDiccionario.Connection
     class Connect
     {
         private string connectionString;
+        private String usuario, contraseña, host, servicio;
+        private int puerto;
 
-        public Connect(string usuario, string contraseña, string host, int puerto, string servicio)
+
+        public Connect()
         {
-            // Construir la cadena de conexión
-            connectionString = $"User Id={usuario};Password={contraseña};Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST={host})(PORT={puerto}))(CONNECT_DATA=(SERVICE_NAME={servicio})));";
+            
         }
 
-        public void Conectar()
+        public Boolean Conectar(String p_user, String p_pass)
         {
-            // Crear la conexión
-            using (OracleConnection conn = new OracleConnection(connectionString))
-            {
-                try
-                {
-                    // Abrir la conexión
-                    conn.Open();
-                    Console.WriteLine("Conexión exitosa con la base de datos Oracle.");
+            host = "localhost";
+            puerto = 1521;
+            servicio = "xe";
 
-                    // Aquí puedes ejecutar las consultas necesarias
-                }
-                catch (OracleException ex)
+            usuario = "labbd2";
+            contraseña = "labbd2";
+
+            // Construir la cadena de conexión
+            connectionString = $"User Id={usuario};Password={contraseña};Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST={host})(PORT={puerto}))(CONNECT_DATA=(SID={servicio})));";
+
+            OracleConnection conn = new OracleConnection(connectionString);
+
+            if (p_user.Equals(usuario) && p_pass.Equals(contraseña))
                 {
-                    Console.WriteLine("Error al conectar a la base de datos: " + ex.Message);
-                }
-            }
+                    try
+                    {
+                        // Abrir la conexión
+                        conn.Open();
+                        Console.WriteLine("Conexión exitosa con la base de datos Oracle.");
+
+                        return true;
+                        // Aquí puedes ejecutar las consultas necesarias
+                    }
+                    catch (OracleException ex)
+                    {
+                        Console.WriteLine("Error al conectar a la base de datos: " + ex.Message);
+                    }
+               }
+                
+
+            return false;
         }
     }
 }
