@@ -15,7 +15,7 @@ namespace BasesDiccionario.Connection
         private string host = "localhost";
         private int puerto = 1521;
         private string servicio = "xe";
-        private OracleConnection oracleConnection;
+        public OracleConnection oracleConnection;
 
 
         public Connect()

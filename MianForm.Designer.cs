@@ -28,70 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            bt_tablas = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
+            btTablas = new Button();
+            btFuncionalidad = new Button();
+            btProcedimiento = new Button();
+            btTrigger = new Button();
+            btVista = new Button();
+            btFiltro = new Button();
             textBoxResultados = new TextBox();
+            SuspendLayout();
             // 
-            // bt_tablas
+            // btTablas
             // 
-            bt_tablas.Location = new Point(109, 255);
-            bt_tablas.Name = "bt_tablas";
-            bt_tablas.Size = new Size(125, 23);
-            bt_tablas.TabIndex = 1;
-            bt_tablas.Text = "Lista_Tablas";
-            bt_tablas.UseVisualStyleBackColor = true;
-            bt_tablas.Click += button1_Click;
+            btTablas.Location = new Point(109, 255);
+            btTablas.Name = "btTablas";
+            btTablas.Size = new Size(125, 23);
+            btTablas.TabIndex = 1;
+            btTablas.Text = "Lista_Tablas";
+            btTablas.UseVisualStyleBackColor = true;
+            btTablas.Click += btTablas_Click;
             // 
-            // button2
+            // btFuncionalidad
             // 
-            button2.Location = new Point(109, 341);
-            button2.Name = "button2";
-            button2.Size = new Size(125, 23);
-            button2.TabIndex = 2;
-            button2.Text = "Nombre_Funciones";
-            button2.UseVisualStyleBackColor = true;
+            btFuncionalidad.Location = new Point(109, 341);
+            btFuncionalidad.Name = "btFuncionalidad";
+            btFuncionalidad.Size = new Size(125, 23);
+            btFuncionalidad.TabIndex = 2;
+            btFuncionalidad.Text = "Nombre_Funciones";
+            btFuncionalidad.UseVisualStyleBackColor = true;
+            btFuncionalidad.Click += btFuncionalidad_Click;
             // 
-            // button3
+            // btProcedimiento
             // 
-            button3.Location = new Point(330, 255);
-            button3.Name = "button3";
-            button3.Size = new Size(157, 23);
-            button3.TabIndex = 3;
-            button3.Text = "Nombre_Procedimiento";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btProcedimiento.Location = new Point(330, 255);
+            btProcedimiento.Name = "btProcedimiento";
+            btProcedimiento.Size = new Size(157, 23);
+            btProcedimiento.TabIndex = 3;
+            btProcedimiento.Text = "Nombre_Procedimiento";
+            btProcedimiento.UseVisualStyleBackColor = true;
+            btProcedimiento.Click += btProcedimiento_Click;
             // 
-            // button4
+            // btTrigger
             // 
-            button4.Location = new Point(330, 341);
-            button4.Name = "button4";
-            button4.Size = new Size(157, 23);
-            button4.TabIndex = 4;
-            button4.Text = "Nombre_Trigger";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            btTrigger.Location = new Point(330, 341);
+            btTrigger.Name = "btTrigger";
+            btTrigger.Size = new Size(157, 23);
+            btTrigger.TabIndex = 4;
+            btTrigger.Text = "Nombre_Trigger";
+            btTrigger.UseVisualStyleBackColor = true;
+            btTrigger.Click += btTrigger_Click;
             // 
-            // button5
+            // btVista
             // 
-            button5.Location = new Point(583, 255);
-            button5.Name = "button5";
-            button5.Size = new Size(128, 23);
-            button5.TabIndex = 5;
-            button5.Text = "Nombre_Vistas";
-            button5.UseVisualStyleBackColor = true;
+            btVista.Location = new Point(583, 255);
+            btVista.Name = "btVista";
+            btVista.Size = new Size(128, 23);
+            btVista.TabIndex = 5;
+            btVista.Text = "Nombre_Vistas";
+            btVista.UseVisualStyleBackColor = true;
+            btVista.Click += btVista_Click;
             // 
-            // button6
+            // btFiltro
             // 
-            button6.Location = new Point(583, 341);
-            button6.Name = "button6";
-            button6.Size = new Size(128, 23);
-            button6.TabIndex = 6;
-            button6.Text = "Filtro_Tablas";
-            button6.UseVisualStyleBackColor = true;
+            btFiltro.Location = new Point(583, 341);
+            btFiltro.Name = "btFiltro";
+            btFiltro.Size = new Size(128, 23);
+            btFiltro.TabIndex = 6;
+            btFiltro.Text = "Filtro_Tablas";
+            btFiltro.UseVisualStyleBackColor = true;
+            btFiltro.Click += btFiltro_Click;
             // 
             // textBoxResultados
             // 
@@ -103,7 +107,6 @@
             textBoxResultados.ScrollBars = ScrollBars.Both;
             textBoxResultados.Size = new Size(552, 154);
             textBoxResultados.TabIndex = 7;
-            textBoxResultados.TextChanged += textBoxResultados_TextChanged;
             // 
             // MainForm
             // 
@@ -111,12 +114,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(textBoxResultados);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(bt_tablas);
+            Controls.Add(btFiltro);
+            Controls.Add(btVista);
+            Controls.Add(btTrigger);
+            Controls.Add(btProcedimiento);
+            Controls.Add(btFuncionalidad);
+            Controls.Add(btTablas);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -126,12 +129,12 @@
 
         #endregion
 
-        private Button bt_tablas;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
+        private Button btTablas;
+        private Button btFuncionalidad;
+        private Button btProcedimiento;
+        private Button btTrigger;
+        private Button btVista;
+        private Button btFiltro;
         private TextBox textBoxResultados;
     }
 }

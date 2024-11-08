@@ -44,7 +44,6 @@ namespace BasesDiccionario
 
         private void BotonConectar_Click(object sender, EventArgs e)
         {
-            
 
             if (conn.validarConexion(txtUser.Text, txtPassword.Text) == true)
             {
