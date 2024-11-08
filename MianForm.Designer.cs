@@ -35,7 +35,6 @@
             button5 = new Button();
             button6 = new Button();
             textBoxResultados = new TextBox();
-            SuspendLayout();
             // 
             // bt_tablas
             // 
