@@ -103,6 +103,7 @@
             textBoxResultados.ScrollBars = ScrollBars.Both;
             textBoxResultados.Size = new Size(552, 154);
             textBoxResultados.TabIndex = 7;
+            textBoxResultados.TextChanged += textBoxResultados_TextChanged;
             // 
             // MainForm
             // 

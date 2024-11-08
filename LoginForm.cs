@@ -12,9 +12,11 @@ using System.Data.OracleClient;
 
 namespace BasesDiccionario
 {
+
     public partial class LoginForm : Form
     {
         Connect conn = new Connect();
+
         public LoginForm()
         {
             InitializeComponent();
@@ -42,11 +44,13 @@ namespace BasesDiccionario
 
         private void BotonConectar_Click(object sender, EventArgs e)
         {
+            
 
-            if (conn.Conectar(txtUser.Text, txtPassword.Text) == true)
+            if (conn.validarConexion(txtUser.Text, txtPassword.Text) == true)
             {
                 //MessageBox.Show("hola");
-                MainForm form2 = new MainForm();
+                conn.abrirConexion();
+                MainForm form2 = new MainForm(conn);
                 form2.Show();
             }
             else
